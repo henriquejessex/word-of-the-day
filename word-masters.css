@@ -51,17 +51,20 @@ body {
 .correct {
     background-color: darkgreen;
     color: aliceblue;
+    border-color: rgb(0, 251, 255);
 }
 .close {
     background-color: goldenrod;
-    color: #cccccc;
+    color: #b0009b;
+    border-color: rgb(0, 255, 195);
 }
 .wrong {
-    background-color: #888;
-    color: #cccccc;
+    background-color: #000000;
+    color: #ff0000;
+    border-color: rgb(255, 0, 0);
 }
 .invalid {
-    animation: flash 1s linear infinite;
+    animation: flash 1s linear alternate;
 }
 /* flash red border then fades back to gray*/
 @keyframes flash {
@@ -81,14 +84,16 @@ body {
         transform: rotate(360deg);
     }
 }
-.hidden {
-    visibility: hidden;
-}
 .info-bar {
+    visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.show {
+    visibility: visible;
+}
+
 /* winner animation */
 
 @keyframes rainbow {
